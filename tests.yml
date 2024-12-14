@@ -1,0 +1,23 @@
+name: Run tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v3  # mandatory
+      # then, put any step you want there:
+      - name: check that file1 exists
+        run: |
+          if [[ -e file1 ]]; then 
+            exit 0
+          else 
+            exit 1
+          fi

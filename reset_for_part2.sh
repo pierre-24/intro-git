@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# A few command so that part 2 runs smoothly
+# A few things so that part 2 runs smoothly
 
 # add remote
 git remote add originx git@github.com:pierre-24/test-repo-git.git
